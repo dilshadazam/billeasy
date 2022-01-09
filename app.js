@@ -13,8 +13,6 @@ import administratorRoutes from "./routes/administrator-routes.js";
 
 app.use("/administrator", administratorRoutes);
 
-// app.use("/user", userRoutes);
-
 app.use(helmet());
 app.use(compression());
 

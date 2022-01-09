@@ -6,5 +6,13 @@ const router = express.Router();
 
 
 import { createEmployee} from "../controllers/create-employee.js";
-import {  } from "../controllers/administrator/create-exam.js";
+import { createDepartment } from "../controllers/create-department.js";
+
+
+
+
+
+
+
+
 export default router;

@@ -2,8 +2,10 @@
 import Employee from "../models/employee.js";
 
 export const createDepartment = async (req, res, next) => {
-  const { d_name, employeeId } = req.body;
   try {
+    validationErrorHandler(req, next);
+    const { d_name, employeeId } = req.body;
+
     const preExistingDepartment = await Employee.findOne({
       where: {
         d_name,
