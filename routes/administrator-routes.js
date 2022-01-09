@@ -7,6 +7,8 @@ const router = express.Router();
 import { createEmployee } from "../controllers/create-employee.js";
 import { createDepartment } from "../controllers/create-department.js";
 
+import { getAllEmployees } from "../controllers/get-all-employee.js";
+
 // CREATE Employee
 router.post("/addemployee", [
   body("name").not().isEmpty().trim().escape().withMessage("name is required"),
@@ -47,5 +49,9 @@ router.post("/adddepartment", [
     .withMessage("employeeiD is required"),
   createDepartment,
 ]);
+
+//GET ALL EMPLOYEE WITH DEPARTMENT DETAILS
+
+router.get("/getallemployee", getAllEmployees);
 
 export default router;
